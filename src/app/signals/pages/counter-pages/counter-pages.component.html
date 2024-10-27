@@ -1,0 +1,28 @@
+<h1
+class="font-bold text-xl">Counter:
+<span class="font-normal font-mono"> {{ counter() }}
+</span>
+</h1>
+
+<h1
+ class="font-bold text-xl mt-2"> Square Counter:
+ <span class="font-normal font-mono"> {{ squareCounter() }}</span> </h1>
+
+
+
+<div class="flex items-center mt-5">
+
+  <button
+  (click)="increasedBy(1)"
+  class="px-8 py-2 bg-gray-600 hover:bg-blue-400 w-auto block text-white rounded-lg"> +1 </button>
+  &nbsp;
+  <button
+  (click)="decreasedBy(1)"
+  class="px-8 py-2 bg-gray-600 hover:bg-blue-400 w-auto block text-white rounded-lg"> -1 </button>
+  &nbsp;
+
+  <button
+  (click)="counter.set(0)"
+  class="px-8 py-2 bg-gray-600 hover:bg-blue-400 w-auto block text-white rounded-lg"> Reset </button>
+
+</div>

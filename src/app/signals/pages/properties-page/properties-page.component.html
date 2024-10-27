@@ -1,0 +1,58 @@
+<h1 class="text-xl mt-2 mb-4 text-white font-semibold"> Mutations</h1>
+<hr>
+
+
+<div class="align-bottom">
+  <div class="mt-5 bg-gray-800 text-white p-4 rounded-lg shadow-sm border border-gray-600">
+      <h5 class="font-semibold">Email: </h5>
+
+      <input
+      #txtEmail
+      (input)="onFieldUpdated('email', txtEmail.value)"
+      type="text"
+      class="bg-gray-600 rounded-lg block w-full mt-2 mb-2 text-white p-1"
+      [value]="user().email"
+      >
+
+     <h5 class="font-semibold mt-2">First Name: </h5>
+
+     <input type="text"
+     #txtFirstName
+     (input)="onFieldUpdated('first_name', txtFirstName.value)"
+      class="mt-2 bg-gray-600 rounded-lg block w-full  mb-2 text-white p-1"
+     [value]="user().first_name"
+      >
+
+     <h5 class="font-semibold mt-2">First Name: </h5>
+
+     <input type="text"
+     #txtLastName
+     (input)="onFieldUpdated('last_name', txtLastName.value)"
+      class="mt-2 bg-gray-600 rounded-lg block w-full  mb-2 text-white p-1"
+     [value]="user().last_name"
+      >
+
+  </div>
+
+  <div class="mt-6 ">
+    <p class="font-semibold ">User Information:</p>
+    <div class="mt-5 bg-gray-800 text-white p-4 rounded-lg shadow-sm border border-gray-600">
+    <pre class="mt-2 text-white">
+        {{ user() | json }}
+    </pre>
+
+    {{ fullName()}}
+
+
+
+    <button
+    (click)="increasedBy(+1)"
+    class="rounded-lg px-8 py-2 bg-indigo-600 hover:bg-indigo-400 border border-white">
+        +1
+    </button>
+
+    </div>
+  </div>
+
+
+</div>
